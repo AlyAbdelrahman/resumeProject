@@ -1,0 +1,55 @@
+  
+// LTR languages directions.
+
+$default-float: left;
+$opposite-float: right;
+$default-direction: ltr;
+$opposite-direction: rtl;
+$lang: en;
+
+
+// LTR Fonts
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: url('#{$english-font-base}.ttf?ver=0');
+    src: url('#{$english-font-base}.ttf?ver=0#iefix') format('ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro-Italic';
+    src: url('#{$english-font-medium-italic}.ttf?ver=0');
+    src: url('#{$english-font-medium-italic}.ttf?ver=0#iefix') format('ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro-ExtraLightItalic';
+    src: url('#{$english-font-bold}.ttf?ver=0');
+    src: url('#{$english-font-bold}.ttf?ver=0#iefix') format('ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro-Italic';
+    src: url('#{$english-font-ExtraLightItalic}.ttf');
+    src: url('#{$english-font-ExtraLightItalic}.ttf') format('truetype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro-SemiBold';
+    src: url('#{$english-font-medium}.ttf?ver=0');
+    src: url('#{$english-font-medium}.ttf?ver=0#iefix') format('ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SourceSansPro-Light';
+    src: url('#{$english-font-light}.ttf?ver=0');
+    src: url('#{$english-font-light}.ttf?ver=0#iefix') format('ttf');
+    font-style: normal;
+}
+
+$font-family-base: "SourceSansPro-Regular";
+$font-family-medium-italic:"SourceSansPro-Italic";
+$font-family-ExtraLightItalic: "SourceSansPro-ExtraLightItalic";
+$font-family-light-italic: "SourceSansPro-Italic";
+$font-family-medium: "SourceSansPro-SemiBold";
+$font-family-light: "SourceSansPro-Light";
+

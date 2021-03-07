@@ -1,0 +1,120 @@
+/* _-_-_- modules/BUTTONS -_-_-_ */
+.button {
+	display: inline-block;
+	border-radius: 3px;
+	padding: 7px 12px;
+	border: 1px solid #D5D5D5;
+	background-image: linear-gradient(#EEE, #DDD);
+    font-family: $font-family-light-italic;
+}
+.button--state-success {
+	color: #FFF;
+	background: #569E3D linear-gradient(#79D858, #569E3D) repeat-x;
+	border-color: #4A993E;
+}
+.button--state-danger {
+	color: #900;
+}
+.button--with--transation{
+	transition: 4s;
+	/* Hidden init state */
+	opacity: 0;
+	transform: translateY(10px);
+	&.enter,
+	&.entered {
+	  /* Animate in state */
+	  opacity: 1;
+	  transform: translateY(0px);
+	}
+	
+}
+.layout-cover{
+	width: 100%;
+	height: 50%;
+	position: fixed;
+	z-index: 1000;
+	background: black;
+
+}
+.layout-appear {
+	transform: translateY(-48%) translateZ(0px);
+  }
+  .layout-appear-active {
+	transform: translateY(-150%) translateZ(0px);
+	transition: all 2s linear ;
+
+  }
+ 
+  .layout-appear-done{
+	display: none;
+  }
+  //slide navigation button 
+//   #fp-nav ul li a.active span{
+// 	border-radius: 0;
+// 	left: 0%;
+// 	width: 60px;
+	
+//   }
+//   #fp-nav ul li a span{
+// 	left: 0%;
+// 	border-radius: 0;
+// 	background: white;
+//   }
+//   #fp-nav ul li{
+// 	width: 62px;
+// 	height: 7px;
+// 	margin-bottom: 1rem;
+
+//   }
+// #fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+// 	width: 24px;
+//     height: 100%;
+// }
+// #fp-nav ul li a{
+// 	width: 24px;
+//     height: 100%;
+//     background: #fff;
+// }
+// #fp-nav ul li a span, .fp-slidesNav ul li a span{
+// 	background: #fff
+// }
+#fp-nav ul li, .fp-slidesNav ul li{
+	margin: 0;
+    width: 3rem;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+	background: #fff;
+	border-radius: 0% !important;
+	display: none;
+}
+#fp-nav ul li a {
+    width: 24px;
+    height: 100%;
+    background: #fff;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+#fp-nav ul li {
+    height: 3px;
+    margin: 0 0 40px;
+}
+#fp-nav ul li, .fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position: relative;
+}
+#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+    width: 10px;
+    height: 10px;
+    margin: -5px 0px 0px -5px;
+}
+#fp-nav ul li .active {
+    width: 40px;
+}
+#fp-nav ul li {
+    height: 3px;
+    margin: 0 0 40px;
+}
