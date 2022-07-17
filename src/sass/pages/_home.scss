@@ -15,6 +15,9 @@
     opacity: 0.9;
     top: 50%;
     z-index: 99;
+    @media only screen and (max-width: 768px) and (min-width:416px) {
+        top: 13%;
+    }
   }
 .portfolio__title{
     font-size: 4.4rem;
@@ -30,18 +33,49 @@
     top: 40%;
     z-index: 98;
     left: 21% !important;
-
+    @media only screen and (max-width: 768px) and (min-width:416px) {
+        z-index: 828;
+        left: -13% !important;
+        top: 20%;
+    }
 }
 .cloud2{
     top: 19rem;
     z-index: 99;
     left: 14% !important;
+    @media only screen and (max-width: 415px) {
+        left: -153% !important
+    }
 }
 .cloud3{
     top: 19rem;
     z-index: 99;
     left: 50% !important;
+    @media only screen and (max-width: 768px) and (min-width:416px) {
+        top: 49rem;
+    }
 }
-
+.mainText{
+    position: absolute;
+    top: 19%;
+    right: 3%;
+    font-size: 6rem;
+    font-family: fantasy;
+    font-optical-sizing: revert;
+    color: #ff4d5a;
+    z-index: 999;
+    
+}
+.mainText {
+    position: absolute;
+    top: 19%;
+    right: 3%;
+    font-size: 6rem;
+    font-family: fantasy;
+    font-optical-sizing: revert;
+    color: #ff4d5a;
+    z-index: 999;
+    text-shadow: 0 0 9px black;
+}
 
 

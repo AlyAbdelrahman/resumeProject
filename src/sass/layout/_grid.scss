@@ -24,6 +24,9 @@
   background-position: center center;
   background-repeat: no-repeat;
   will-change: transform;
+  @media only screen and (max-width: 768px) and (min-width:416px) {
+  top: 0;
+  }
 }
 .card3{
   top: 0;
@@ -38,14 +41,48 @@
   left: 30%;
   justify-content: center;
   position: relative;
-  top: -284vh;
+  top: 6rem;
+  opacity: 1;
   transition: 2s;
+  @media only screen and (max-width: 1439px) and (min-width:769px) {
+    transform: scale(0.5);
+    top: 25vh !important;
+
+  }
+  @media only screen and (max-width: 768px) and (min-width:416px) {
+    transform: scale(0.5);
+    top: -35rem;
+    position: absolute;
+  }
+  @media only screen and (max-width: 415px) {
+    transform: scale(0.4);
+    top: 10rem;
+    width: 50%;
+    pointer-events: none !important;
+  }
+}
+#animated__moon{
+  @media only screen and (max-width: 1439px) and (min-width:768px) {
+    left: 22% !important;
+  }
+  @media only screen and  (min-width:1920px) {
+    left: 36% !important;
+  }
 }
   #animated__moon, #cloud1, #cloud2, #cloud3 {
     // right: -150%;
     left: 50%;
     opacity: 0;
     transition: all .5s ease-out;
+    
+  }
+  #animated__moon{
+    @media only screen and (max-width: 768px) and (min-width:416px) {
+      left: 16% !important;
+    }
+    @media only screen and (max-width: 415px) {
+      left: -80% !important;
+    }
   }
   
   .fp-viewing-0 #animated__moon, .fp-viewing-0 #cloud1, .fp-viewing-0 #cloud2, .fp-viewing-0 #cloud3   {
@@ -53,5 +90,100 @@
     left: 32%;
     opacity: 1;
     transition: all .5s linear .8s;
+   
+  }
+  .scrollDownText{
+    top: 900vh;
+    position: fixed;
+    font-size: 1.4rem;
+    bottom: 80px;
+    left: 0;
+    line-height: 1;
+    letter-spacing: 0.3em;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    color: #fff;
+    transition: 2s;
+    z-index: 100;
+    &::after{
+      content: "";
+      width: 2px;
+      height: 64px;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  .pageNumber{
+    line-height: 1.1;
+    // text-shadow: 0 10px 30px #020b1680;
+    position: absolute;
+    overflow-y: hidden;
+    right: 0%;
+    top: 70%;
+    font-size: 15rem;
+    // color: #fff;
+    font-family: "fantasy";
+    z-index: 200;
+    transition: 3s;
+    color: #c6e2ff;
+    will-change: text-shadow;
+    animation: neon .08s ease-in-out infinite alternate;
+    line-height: 1;
+  }
+  .pageNumberContainer{
+    height: 39rem;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    bottom: 0;
+    z-index: 998;
+    pointer-events: none;
+  }
+  .fp-viewing-0 .scrollDownText {
+    top: 65vh;
+  }
+  [class*="fp-viewing"] .active .pageNumber {
+    top: 25%;
   }
   
+
+ #root{
+  @media only screen and (max-width: 768px) and (min-width:416px) {
+
+   position: relative;
+  }
+ }
+.blackLoadingScreen{
+  width: 100vw;
+  height: 200vh;
+  position: absolute;
+  background-color: black;
+  z-index: 101;
+  animation: open 3s linear forwards;
+  left: 0;
+  top: 0;
+}
+@keyframes open {
+  from {
+    top: 0;
+  }
+  to {
+    top: -3000px;
+  }
+}
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}

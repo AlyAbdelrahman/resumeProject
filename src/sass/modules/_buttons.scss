@@ -48,36 +48,33 @@
   .layout-appear-done{
 	display: none;
   }
-  //slide navigation button 
-//   #fp-nav ul li a.active span{
-// 	border-radius: 0;
-// 	left: 0%;
-// 	width: 60px;
-	
-//   }
-//   #fp-nav ul li a span{
-// 	left: 0%;
-// 	border-radius: 0;
-// 	background: white;
-//   }
-//   #fp-nav ul li{
-// 	width: 62px;
-// 	height: 7px;
-// 	margin-bottom: 1rem;
-
-//   }
-// #fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
-// 	width: 24px;
-//     height: 100%;
-// }
-// #fp-nav ul li a{
-// 	width: 24px;
-//     height: 100%;
-//     background: #fff;
-// }
-// #fp-nav ul li a span, .fp-slidesNav ul li a span{
-// 	background: #fff
-// }
+  .showMeButtonLink{
+	display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    background: #ff4d5a;
+    line-height: 1;
+    font-weight: bold;
+    padding: 18px 32px;
+    border-radius: 50px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    letter-spacing: 0.1em;
+	border:none;
+	text-decoration: none;
+	position: relative;
+	left: -100%;
+	transition: 2.5s;
+	&:hover{
+		-webkit-transform: translate3d(0, -25%, 0);
+		transform: translate3d(0, -25%, 0);
+	}
+}
+[class*="fp-viewing"] .active .showMeButtonLink{
+	left: 0%;
+}
+  
 #fp-nav ul li, .fp-slidesNav ul li{
 	margin: 0;
     width: 3rem;
@@ -115,6 +112,6 @@
     width: 40px;
 }
 #fp-nav ul li {
-    height: 3px;
-    margin: 0 0 40px;
+    height: 3px !important;
+    margin: 0 0 40px !important;
 }

@@ -4,21 +4,36 @@
     display: flex;
     justify-content: space-between;
     width: 96%;
-    z-index: 999;
+    z-index: 9999;
     padding: 2rem 0rem 0rem 1rem;
     &__title{
         font-family: $font-family-ExtraLightItalic;
         font-size: 1.4rem;
         letter-spacing: 0.1em;
-        position: relative;
-        z-index: 1000;
+        position: absolute;
+        z-index: 9999;
         margin: 0;
         color:$white;
+        left: 1.5%;
+        @media only screen and (max-width: 768px)  {
+            font-size: 1rem;
+        }
     }
     &__socialMedia{
         display: flex;
+        position: absolute;
+        right: 0;
+        @media only screen and (max-width: 768px)  {
+            right: -51px;
+            transform: scale(0.7);
+        }
         &__icon{
             margin-right: 3.2rem;
+            transition: 1s;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.5;
+            }
         }
     }
 }
